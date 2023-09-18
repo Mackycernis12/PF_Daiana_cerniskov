@@ -1,0 +1,14 @@
+{% extends "padre.html" %}
+
+{% block contenido %}
+<div style="max-width: 400px; margin: 0 auto; padding: 20px;">
+    <h1 style="text-align: center; color: #6600ff;">Ingrese sus datos</h1>
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+        <button class="btn btn-primary" style="width: 100%;">Iniciar</button>
+    </form>
+</div>
+{% endblock %}

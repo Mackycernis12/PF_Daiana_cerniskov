@@ -1,0 +1,23 @@
+{%extends "padre.html" %}
+
+{%block contenido%}
+    <body>
+    <h1 style="margin: 20px; margin: 30 auto; color: #9000ff;">Resutado de la busqueda</h1>
+    </body>
+
+    {%if librerias%}
+    <ul> 
+        {% for libreria in librerias %}
+            <li style="margin: 10px; margin: 30 auto; color: #9000ff;"> Nombre:  {{libreria.nombre}}, editorial: {{libreria.Editorial}}, Año de publicación: {{libreria.año_publicacion}}</li>
+
+        {%endfor%}
+
+    </ul>
+    {% else %}
+        <p style="margin: 10px; margin: 30 auto">No se encontraron resultados</p>
+    {% endif %}
+
+    <a href="javascript:history.back()" class="btn btn-primary" style="margin: 20px;">Volver Atrás</a>
+    </form>
+
+{%endblock%}

@@ -1,0 +1,10 @@
+{% extends "padre.html" %}
+{% load static%}
+{% block contenido %}
+
+<h1 class="text-center" style="margin: 10px; margin: 30 auto; color:#6600ff; font-style: italic;">Bienvenido/a al portal de empleados de Tierra media</h1>
+
+<h2 style="margin: 40px; margin: 30 auto; color:#000000; font-weight: lighter;">Este portal le ayudará a llevar a cabo sus tareas dirias para Tierra media tienda de libros. Si ustéd es un nuevo empleado tendrá que registrarse, si no inicie sesión con su nombre de usuario y contraseña.</h2>
+<a href="{% url 'login' %}" class="btn btn-primary" style="margin: 40px; margin: 30 auto">Iniciar sesión</a>
+<a href="{% url 'register' %}" class="btn btn-warning" style="margin: 1px; margin: 10 auto">Registrarse</a>
+{% endblock %}

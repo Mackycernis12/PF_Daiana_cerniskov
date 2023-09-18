@@ -1,0 +1,12 @@
+{% extends "padre.html" %}
+
+{% block contenido %}
+<div style="max-width: 400px; margin: 0 auto; padding: 20px;">
+    <h1 style="color: #6600ff;">Búsqueda de libros</h1>
+    <form action="buscar" method="GET">
+        <p style="color: #6600ff; font-weight: bolder;">Nombre del libro:</p>
+        <input type="text" style="margin-bottom: 10px; padding: 9px; width: 100%;" name="nombre" required>
+        <input type="submit" class="btn btn-primary" style="width: 100%;" value="Buscar">
+    </form>
+</div>
+{% endblock %}

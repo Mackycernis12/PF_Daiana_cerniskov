@@ -1,0 +1,39 @@
+{%extends "padre.html" %}
+
+{%block contenido%}
+
+
+<div style="max-width: 400px; margin: 0 auto; padding: 20px;">
+  <form action="alta_clientes" method="POST">
+      {% csrf_token %}
+      <h1 style="text-align: center; color: #6600ff;">Registro de clientes</h1>
+      <h2 style="color: #000000; font-size: 17px; font-weight: lighter; font-style: italic;">Si desea registrar un cliente, ingrese la información requerida abajo</h2>
+
+      <p style="margin-bottom: 5px; color: #6600ff;">Nombre</p>
+      <input type="text" name="nombre" required style="margin-bottom: 10px; width: 100%;" />
+
+      <p style="margin-bottom: 5px; color: #6600ff;">Correo electrónico</p>
+      <input type="text" name="email" required style="margin-bottom: 10px; width: 100%;" />
+
+      <p style="margin-bottom: 5px; color: #6600ff;">Dirección</p>
+      <input type="text" name="direccion" required style="margin-bottom: 10px; width: 100%;" />
+
+      <input type="submit" class="btn btn-primary" style="width: 100%;" />
+  </form>
+</div>
+
+    {% if messages %}
+    <div class="alert alert-success" role="alert">
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+  </div>
+
+  <div style="max-width: 400px; margin: 40px; padding: 20px">
+    <a href="ver_clientes" class="btn btn-primary">Lista de clientes</a>
+  </div>
+{% endif %}
+
+{%endblock%}

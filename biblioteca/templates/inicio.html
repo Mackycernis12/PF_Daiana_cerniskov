@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+{% load static %}
+{% block contenido %}
+
+<h1 class="text-center" style="margin: 10px; margin: 30 auto; color:#6600ff;">{{ mensaje }}</h1> 
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card" style="width: 10rem; margin: 40px; margin: 0 auto">
+                <img src="{{ avatar.url }}" class="card-img-top" alt="{{ request.user.username }}"
+                     style="transform: rotate({{ orientation }}deg);">
+                <div class="card-body">
+                    <p class="card-text"></p>
+                    <a href="{% url 'Editar_perfil' %}" class="btn btn-warning">Edita tu perfil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

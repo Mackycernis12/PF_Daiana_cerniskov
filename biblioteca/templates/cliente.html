@@ -1,0 +1,33 @@
+{% extends "padre.html" %}
+
+{% block contenido %}
+<div class="container-fluid">
+    <body>
+        <h1 style="text-align: center; color: #6600ff; margin-top: 30px;">Base de datos de clientes de Tierra Media</h1>
+    </body>
+
+    <div>
+        <a href="alta_clientes" class="btn btn-warning" style="margin-left: 40px">Dar de alta a un cliente</a>
+    </div>
+
+    <table class="table table-hover" style="text-align: center; margin-top: 80px;">
+        <tr>
+            <th style="margin: 10px; margin: 30 auto; color:#6600ff;">Nombre del cliente</th>
+            <th style="margin: 10px; margin: 30 auto; color: #6600ff;">Email</th>
+            <th style="margin: 10px; margin: 30 auto; color: #6600ff;">Direccion</th>
+        </tr>
+  
+        {% for cliente in clientes_ver %}
+        <tr> 
+            <td style="margin: 10px; margin: 30 auto; color: #6600ff;">{{ cliente.nombre }} </td>
+            <td style="margin: 10px; margin: 30 auto; color: #6600ff;">{{ cliente.email }} </td>
+            <td style="margin: 10px; margin: 30 auto; color: #6600ff;">{{ cliente.direccion }} </td>
+            <td>
+                <a href="{% url 'eliminar_cliente' cliente.id %}" class="btn btn-danger">Borrar</a>
+                <a href="{% url 'editar_cliente' cliente.id %}" class="btn btn-success">Editar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

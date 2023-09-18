@@ -1,0 +1,17 @@
+{% extends "padre.html" %}
+
+{% block contenido %}
+<form action="{% url 'editar_cliente' cliente.id %}" method="POST">
+    {% csrf_token %}   
+    <p style="margin: 10px;">Nombre</p>
+    {{ mi_formulario.nombre }}
+
+    <p style="margin: 10px;">E-mail</p>
+    {{ mi_formulario.email }}
+
+    <p style="margin: 10px;">Direccion</p>
+    {{ mi_formulario.direccion }}
+
+    <input type="submit" style="margin: 10px 0" value="Enviar">
+</form>
+{% endblock %}

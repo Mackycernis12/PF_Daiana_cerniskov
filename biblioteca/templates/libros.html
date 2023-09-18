@@ -1,0 +1,37 @@
+{%extends "padre.html" %}
+
+{%block contenido%}
+
+<div class="container-fluid">
+    <body>
+        <h1 style="text-align: center; color: #6600ff; margin-top: 30px;">Libros disponibles</h1>
+
+        <div>
+            <a href="alta_libros" class="btn btn-warning" style="margin-left: 40px;">Dar de alta un libro</a>
+        </div>
+
+        </body>
+        <table class="table table-hover" style="text-align: center; margin-top: 80px;">
+            <tr>
+                <th style="margin: 10px; margin: 30 auto; color:#6600ff;">Nombre del libro</th>
+                <th style="margin: 10px; margin: 30 auto; color: #6600ff;">Nombre de la Editorial</th>
+                <th style="margin: 10px; margin: 30 auto; color: #6600ff;">Año</th>
+            </tr>
+      
+            {% for libro in libros_ver %}
+            <tr> 
+                <td style="margin: 10px; margin: 30 auto; color: #6600ff;">{{libro.nombre}} </td>
+                <td style="margin: 10px; margin: 30 auto; color: #6600ff;">{{libro.Editorial}} </td>
+                <td style="margin: 10px; margin: 30 auto; color: #6600ff;">{{libro.año_publicacion}} </td>
+                <td>
+                    <a href="{% url 'eliminar_libros' libro.id %}" class="btn btn-danger">Borrar</a>
+                    <a href="{% url 'editar_libros' libro.id %}" class="btn btn-success">Editar</a>
+
+                </td>
+    
+            {%endfor%}
+            </tr>
+        </table>
+</div>
+   
+{%endblock%}

@@ -1,0 +1,17 @@
+{% extends "padre.html" %}
+
+{% block contenido %}
+
+<h1 class="text-center" style=" color: #6600ff; margin-top: 40px;">Edite su información aquí</h1>
+
+<div style="max-width: 400px; margin: 0 auto; padding: 20px;">
+<form action="" method="POST">
+    {% csrf_token %}
+    <table style="color: #6600ff; margin-top: 10px;">
+        {{miformulario.as_table}}
+
+    </table>
+    <input type="submit" style="margin: 10px 0;width: 100%" value="Enviar" class="btn btn-primary">
+</form>
+</div>
+{% endblock %}
