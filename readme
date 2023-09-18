@@ -1,1 +1,16 @@
-
+1.Bajar el proyecto 
+2. Copiarlos a la carpeta deseada. 
+3. En caso de tener problemas, ir a settings > Templates > y cambiar el DIR del path donde está alojada la carpeta. 
+4. correr el comando python manage.py runserver 
+5. Copiar el URL y agregarle al final /biblioteca/principal: http://127.0.0.1:8000/biblioteca/principal
+6. Dentro del menú principal, hay dos opciones:registrarse y iniciar sesión.
+7. En caso de que no funcionen los links ir a:
+8. Registrarse >>>> http://127.0.0.1:8000/biblioteca/register
+9. Iniciar sesión >>>> http://127.0.0.1:8000/biblioteca/login
+Una vez que se inicie sesión hay varias acciones que se pueden hacer: Editar perfil, ver libros disponibles, y ver clientes.
+links:
+1.  Editar perfil: http://127.0.0.1:8000/biblioteca/editar_perfil
+2.  Lista de clientes: http://127.0.0.1:8000/biblioteca/ver_clientes. Dentro de esta pagina hay otra para poder añadir clientes:http://127.0.0.1:8000/biblioteca/alta_clientes
+3.  Libros disponibles: http://127.0.0.1:8000/biblioteca/ver_libros, dentro de esta pagina hay otra para poder añadir libros: http://127.0.0.1:8000/biblioteca/alta_libros
+4.   Busqueda de libros: http://127.0.0.1:8000/biblioteca/buscar_libros
+5. Log out: http://127.0.0.1:8000/biblioteca/logout/
