@@ -56,7 +56,7 @@ ROOT_URLCONF = 'libreria.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/daian/Python tercera pre-entrega/libreria/biblioteca/templates/"],
+        'DIRS': ["C:/Users/daian/Python tercera pre-entrega/proyecto_final/libreria/biblioteca/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
